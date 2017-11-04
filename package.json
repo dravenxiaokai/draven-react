@@ -1,0 +1,36 @@
+{
+  "name": "draven-react",
+  "version": "1.0.0",
+  "description": "react demo study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dravenxiaokai/draven-react.git"
+  },
+  "author": "dravenxiaokai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dravenxiaokai/draven-react/issues"
+  },
+  "homepage": "https://github.com/dravenxiaokai/draven-react#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "jspm": "^0.16.53"
+  },
+  "jspm": {
+    "dependencies": {
+      "css": "github:systemjs/plugin-css@^0.1.36",
+      "react": "npm:react@^16.0.0",
+      "react-dom": "npm:react-dom@^16.0.0",
+      "semantic-ui": "github:Semantic-Org/Semantic-UI@^2.2.13"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
