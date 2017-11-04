@@ -11,11 +11,14 @@ class CommentBox extends React.Component {
         this.state = { data: [] }
         this.getComments()
 
-        setInterval(() => this.getComments(), 5000)
+        // setInterval(() => this.getComments(), 5000)
     }
 
     handleCommentSubmit(comment) {
-        console.log(comment)
+        let comments = this.state.data,
+            newComments = comments.concat(comment)
+
+        this.setState({ data: newComments })
     }
 
     getComments() {
@@ -34,7 +37,7 @@ class CommentBox extends React.Component {
                 <h1>评论</h1>
                 <div className="ui divider"></div>
                 <CommentList data={this.state.data} />
-                <CommentForm onCommentSubmit={this.handleCommentSubmit} />
+                <CommentForm onCommentSubmit={this.handleCommentSubmit.bind(this)} />
             </div>
         )
     }

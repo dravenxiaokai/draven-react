@@ -12,7 +12,7 @@ class CommentForm extends React.Component {
 
         console.log(author, text)
 
-        this.props.onCommentSubmit({ author, text })
+        this.props.onCommentSubmit({ author, text, date: '刚刚' })
     }
     render() {
         return (
