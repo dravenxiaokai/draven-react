@@ -5,10 +5,14 @@ import Comment from './Comment'
 
 class CommentList extends React.Component {
     render() {
+        let commentNodes = this.props.data.map(comment => {
+            return (
+                <Comment author={comment.author} date={comment.date} text={comment.text} ></Comment>
+            )
+        })
         return (
             <div>
-                <Comment author="draven" date="5 分钟前">天气不错哦！</Comment>
-                <Comment author="xiaokai" date="3 分钟前">出去玩啊！</Comment>
+                {commentNodes}
             </div>
         )
     }
