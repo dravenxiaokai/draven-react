@@ -2,15 +2,19 @@
 
 import React from 'react'
 
-class CommentForm extends React.Component{
-    render(){
+class CommentForm extends React.Component {
+    handleSubmit(event) {
+        event.preventDefault()
+        console.log('提交表单')
+    }
+    render() {
         return (
-            <form className="ui reply form">
+            <form className="ui reply form" onSubmit={this.handleSubmit}>
                 <div className="field">
                     <input type="text" placeholder="姓名" />
                 </div>
                 <div className="field">
-                    <textarea placeholder="评论"></textarea>                    
+                    <textarea placeholder="评论"></textarea>
                 </div>
                 <button type="submit" className="ui blue button">添加评论</button>
             </form>
@@ -18,4 +22,4 @@ class CommentForm extends React.Component{
     }
 }
 
-export {CommentForm as default}
+export { CommentForm as default }
