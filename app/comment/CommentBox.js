@@ -13,7 +13,11 @@ class CommentBox extends React.Component {
 
         setInterval(() => this.getComments(), 5000)
     }
-    
+
+    handleCommentSubmit(comment) {
+        console.log(comment)
+    }
+
     getComments() {
         $.ajax({
             url: this.props.url,
@@ -30,7 +34,7 @@ class CommentBox extends React.Component {
                 <h1>评论</h1>
                 <div className="ui divider"></div>
                 <CommentList data={this.state.data} />
-                <CommentForm />
+                <CommentForm onCommentSubmit={this.handleCommentSubmit} />
             </div>
         )
     }
